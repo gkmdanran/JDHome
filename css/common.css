@@ -1,0 +1,44 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    min-width: 1280px;
+    min-height: 600px;
+    background-color: #f4f4f4;   
+}
+html {
+    overflow-y: scroll;
+}
+.w {
+    width: 78.33%;
+    margin: 0 auto;
+}
+/* 广告 */
+.adve {
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+    background-color: #932737;
+}
+.adve_pic {
+    position: relative;
+    height: 80px;
+    background-color: pink;
+}
+.adve_pic img {
+    width: 100%;
+    height: 100%;
+}
+.adve_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    background: #2d2d2d;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    opacity: 0.3;
+}

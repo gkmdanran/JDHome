@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="" id="app">
+    <!-- 广告 -->
+    <div class="adve" :style="adve_style" v-cloak>
+        <div class="adve_pic w">
+            <img :src="adve_list[1].img" alt=""  >
+            <div class="adve_close iconfont" @click="close_adve()">&#xe75d;</div>
+        </div>
+    </div>
+    <!-- shortcut -->
+    <div class="shortcut">
+        <div class="short_content w">
+            <a href="javascript:;">
+                <i class="iconfont">&#xe73d;</i>
+                <span class="area" title="江苏">江苏</span>
+            </a>
+            <ul>
+                <li class="welcome">
+                    <a href="#">你好，请登录</a>&nbsp;
+                    <a href="" class="red_style">免费注册</a>
+                </li>
+                <li class="spacer"></li>
+                <li class="dt">
+                    <a href="#">我的订单</a>
+                </li>
+                <li class="spacer"></li>
+                <li class="dt down">
+                    <a href="#">我的京东</a>
+                    <i>&#xe66e;</i>
+                </li>
+                <li class="spacer"></li>
+                <li class="dt">
+                    <a href="#">京东会员</a>
+                </li>
+                <li class="spacer"></li>
+                <li class="dt down">
+                    <a href="#" class="red_style">企业采购</a>
+                    <i>&#xe66e;</i>
+                </li>
+                <li class="spacer"></li>
+                <li class="dt down">
+                    <a href="#">客户服务</a>
+                    <i>&#xe66e;</i>
+                </li>
+                <li class="spacer"></li>
+                <li class="dt down">
+                    <a href="#">网站服务</a>
+                    <i>&#xe66e;</i>
+                </li>
+                <li class="spacer"></li>
+                <li class="dt">
+                    <a href="#">手机京东</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- header -->
+    <div class="header">
+        <div class="header_content w">
+            <div class="logo">
+                <a href="index.html"></a>
+            </div>
+            <div class="search_box">
+                <input type="text" placeholder="投影仪家用">
+                <span class="camera">&#xe602;</span>
+                <button>
+                    <i class="iconfont">&#xe61e;</i>
+                </button>
+            </div>
+            <div class="hot_words">
+                <a href="#" class="red_style">品质生活节</a>
+                <a href="#">万卷齐发</a>
+                <a href="#">品质箱包</a>
+                <a href="#">品质用车</a>
+                <a href="#">低价手机</a>
+                <a href="#">低至五折</a>
+                <a href="#">种子</a>
+                <a href="#">美妆护肤</a>
+                <a href="#">手机5折</a>
+            </div>
+            <div class="shopcar">
+                <i class="car iconfont" style="font-weight: 700;">&#xe604;</i>
+                <a href="">我的购物车</a>
+                <i class="count">0</i>
+            </div>
+            <div class="right_adv">
+                <a href="">
+                    <img src="upload/rightadv.png.webp" alt="">
+                </a>
+            </div>
+            <div class="navitems">
+                <ul>
+                   
+                    <li><a href="#" class='red_style'> <strong>秒杀</strong></a></li>
+                    <li><a href="#" class='red_style'> <strong>优惠券</strong></a></li>
+                    <li><a href="#">PLUS会员</a></li>
+                    <li><a href="#">品牌闪购</a></li>
+                    <li><a href="#">拍卖</a></li>
+                    <li><a href="#">京东家电</a></li>
+                    <li><a href="#">京东超市</a></li>
+                    <li><a href="#">京东生鲜</a></li>
+                    <li><a href="#">京东国际</a></li>
+                    <li><a href="#">京东金融</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">
+        <div class="banner_content w">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#">家用电器</a>
+                    </li>
+                    <li>
+                        <a href="#">手机</a>/
+                        <a href="#">运营商</a>/
+                        <a href="#">数码</a>
+                    </li>
+                    <li>
+                        <a href="#">电脑</a>/
+                        <a href="#">办公</a>
+                    </li>
+                    <li>
+                        <a href="#">家居</a>/
+                        <a href="#">家具</a>/
+                        <a href="#">家装</a>/
+                        <a href="#">厨具</a>
+                    </li>
+                    <li>
+                        <a href="#">男装</a>/
+                        <a href="#">女装</a>/
+                        <a href="#">童装</a>/
+                        <a href="#">内衣</a>
+                    </li>
+                    <li>
+                        <a href="#">美妆</a>/
+                        <a href="#">个护清洁</a>/
+                        <a href="#">宠物</a>
+                    </li>
+                    <li>
+                        <a href="#">女鞋</a>/
+                        <a href="#">箱包</a>/
+                        <a href="#">钟表</a>/
+                        <a href="#">珠宝</a>
+                    </li>
+                    <li>
+                        <a href="#">男鞋</a>/
+                        <a href="#">运动</a>/
+                        <a href="#">户外</a>
+                    </li>
+                    <li>
+                        <a href="#">房产</a>/
+                        <a href="#">汽车</a>/
+                        <a href="#">汽车用品</a>
+                    </li>
+                    <li>
+                        <a href="#">母婴</a>/
+                        <a href="#">玩具乐器</a>
+                    </li>
+                    <li>
+                        <a href="#">食品</a>/
+                        <a href="#">酒类</a>/
+                        <a href="#">生鲜</a>/
+                        <a href="#">特产</a>
+                    </li>
+                    <li>
+                        <a href="#">艺术</a>/
+                        <a href="#">礼品鲜花</a>/
+                        <a href="#">农资绿植</a>
+                    </li>
+                    <li>
+                        <a href="#">医药保健</a>/
+                        <a href="#">计生情趣</a>
+                    </li>
+                    <li>
+                        <a href="#">图书</a>/
+                        <a href="#">文娱</a>/
+                        <a href="#">教育</a>/
+                        <a href="#">电子书</a>
+                    </li>
+                    <li>
+                        <a href="#">机票</a>/
+                        <a href="#">酒店</a>/
+                        <a href="#">旅游</a>/
+                        <a href="#">生活</a>
+                    </li>
+                    <li>
+                        <a href="#">理财</a>/
+                        <a href="#">众筹</a>/
+                        <a href="#">白条</a>/
+                        <a href="#">保险</a>
+                    </li>
+                    <li>
+                        <a href="#">安装</a>/
+                        <a href="#">维修</a>/
+                        <a href="#">清洗</a>/
+                        <a href="#">二手车</a>
+                    </li>
+                    <li>
+                        <a href="#">工业品</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="focus">
+                <ul>
+                    <li><a href="#"><img src="upload/focus1.jpg.webp" alt=""></a></li>
+                    <li><a href="#"><img src="upload/focus1.jpg.webp" alt=""></a></li>
+                </ul>
+                <div class="left_arror">&#xe66f;</div>
+                <div class="right_arror">&#xe66d;</div>
+                <ol>
+                    <li class="current"></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+            
+            <div class="slider_list">
+                <ul>
+                    <li>
+                        <img src="upload/slider1.jpg.webp" alt="">
+                        <img src="upload/slider1.jpg.webp" alt="">
+                        <img src="upload/slider1.jpg.webp" alt="">
+                    </li>
+                </ul>
+                <div class="left_arror">&#xe66f;</div>
+                <div class="right_arror">&#xe66d;</div>
+            </div>
+            <div class="fast_news">
+                <div class="news_head">
+                    <div class="news_pic">
+                        <a href="#">
+                            <img src="img/news_pic.png" alt="">
+                        </a>
+                    </div>
+                    <div class="user_show">
+                        <a href="#" class="user_tip">Hi~欢迎逛京东！</a>
+                        <a href="#" class="login">登录</a>&nbsp;|&nbsp;
+                        <a href="#" class="login">注册</a>
+                    </div>
+                    <div class="user_profit">
+                        <a href="#" class="newuser">新人福利</a>
+                        <a href="" class="plus">PLUS会员</a>
+                    </div>
+                    <div class="border"></div>
+                 </div>
+                 <div class="news_body">
+                     <div class="news_hd">
+                        <h5>京东快报</h5>
+                        <a href="#" class="more">更多 ></a>
+                     </div>
+                     <ul>
+                         <li>
+                             <a href="#">
+                                 <span>推荐</span>
+                                 骁龙865对比麒麟990 5G！差距果然太大！
+                             </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <span>最新</span>
+                                骁龙865对比麒麟990 5G！差距果然太大！
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>HOT</span>
+                                骁龙865对比麒麟990 5G！差距果然太大！
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>热门</span>
+                                骁龙865对比麒麟990 5G！差距果然太大！
+                            </a>
+                        </li>
+                       
+                     </ul>
+                     <div class="line"></div>
+                 </div>
+                 <div class="services">
+                     <ul>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#">
+                                <img src="img/service1.png" alt="">
+                                </p>话费</p>
+                            </a>
+                         </li>
+                     </ul>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- 秒杀 -->
+    <div class="sekill">
+        <div class="sekill_content w">
+            <div class="time">
+                <a href="#">
+                    <h1>京东秒杀</h1>
+                    <div class="count_down">
+                        <span>14.00</span>点场 倒计时
+                    </div>
+                    <div class="detail_time">
+                        <span class="h">00</span>
+                        <i>:</i>
+                        <span class="m">48</span>
+                        <i>:</i>
+                        <span class="s">49</span>
+                    </div>
+                </a>
+            </div>
+            <div class="sekill_list">
+                <ul>
+                   <li>
+                       <a href="" title="惠聚春秋 铁观音 茶叶新茶特级清香型安溪乌龙茶小袋包装散装500g 清香型500g">
+                            <img src="upload/seklist1.jpg.webp" alt="">
+                            <p>惠聚春秋 铁观音 茶叶新茶特级清香型安溪乌龙茶小袋包装散装500g 清香型500g</p>
+                            <div class="list_price">
+                                ￥<span class="now">99.00</span>
+                                <div class="gang"></div>
+                                <span class="before"><del>￥299.00</del></span>
+                            </div>
+                       </a>                      
+                   </li>
+                   <li>
+                    <a href="" title="惠聚春秋 铁观音 茶叶新茶特级清香型安溪乌龙茶小袋包装散装500g 清香型500g">
+                         <img src="upload/seklist1.jpg.webp" alt="">
+                         <p>惠聚春秋 铁观音 茶叶新茶特级清香型安溪乌龙茶小袋包装散装500g 清香型500g</p>
+                         <div class="list_price">
+                             ￥<span class="now">99.00</span>
+                             <div class="gang"></div>
+                             <span class="before"><del>￥299.00</del></span>
+                         </div>
+                    </a>                      
+                </li>
+                <li>
+                    <a href="" title="惠聚春秋 铁观音 茶叶新茶特级清香型安溪乌龙茶小袋包装散装500g 清香型500g">
+                         <img src="upload/seklist1.jpg.webp" alt="">
+                         <p>惠聚春秋 铁观音 茶叶新茶特级清香型安溪乌龙茶小袋包装散装500g 清香型500g</p>
+                         <div class="list_price">
+                             ￥<span class="now">99.00</span>
+                             <div class="gang"></div>
+                             <span class="before"><del>￥299.00</del></span>
+                         </div>
+                    </a>                      
+                </li>
+                <li>
+                    <a href="" title="惠聚春秋 铁观音 茶叶新茶特级清香型安溪乌龙茶小袋包装散装500g 清香型500g">
+                         <img src="upload/seklist1.jpg.webp" alt="">
+                         <p>惠聚春秋 铁观音 茶叶新茶特级清香型安溪乌龙茶小袋包装散装500g 清香型500g</p>
+                         <div class="list_price">
+                             ￥<span class="now">99.00</span>
+                             <div class="gang"></div>
+                             <span class="before"><del>￥299.00</del></span>
+                         </div>
+                    </a>                      
+                </li>
+                </ul>
+                <div class="sek_left">&#xe66f;</div>
+                <div class="sek_right">&#xe66d;</div>
+            </div>
+            <div class="sekill_brand">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="upload/sekill_brand1.jpg.webp" alt="">
+                            <p class="txt">周末手机特惠秒杀</p>
+                            <p class="price">荣耀V30低至2949</p>
+                            <div class="gobuy iconfont">品牌秒杀 &#xe66d;</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="upload/sekill_brand1.jpg.webp" alt="">
+                            <p class="txt">周末手机特惠秒杀</p>
+                            <p class="price">荣耀V30低至2949</p>
+                            <div class="gobuy">品牌秒杀 ></div>
+                        </a>
+                    </li>
+                </ul>
+                <ol>
+                    <li class="current"></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- 特价闪购 -->
+    <div class="lowfast">
+        <div class="lowfast_content w">
+            <div class="low">
+                <div class="box_head">
+                    <a href="#">
+                        每日特价
+                        <div class="yuan iconfont">&#xe66d;</div>                      
+                    </a>
+                    <div class="tab_head">
+                        <span>
+                            <a href="">精选</a>
+                        </span>
+                        <span>
+                            <a href="">数码</a>
+                        </span>
+                        <span>
+                            <a href="">美食</a>
+                        </span>
+                        <span>
+                            <a href="">百货</a>
+                        </span>
+                        <span>
+                            <a href="">预告</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="box_body">
+                    <div class="box_big">
+                        <a href="">
+                            <div class="lowest">
+                                184天最低价
+                            </div>
+                            <img src="upload/mobile1.jpg.webp" alt="">
+                            <div class="txt">单筒望远镜高倍高清微光夜视</div>
+                            <div class="price">
+                                ￥<span class="now">39</span> <span class="before"><del>￥89</del></span>
+                            </div>
+                            <div class="state">热卖中</div>
+                        </a>
+                        
+                    </div>
+                    <div class="box_lists">
+                        <div class="goods_list">
+                            <a href="">
+                                <div class="img">
+                                    <img src="upload/goods_list1.jpg.webp" alt="">
+                                    <div class="lowtxt">33天最低价</div>
+
+                                </div>
+                                <div class="txt">松下CR2032进口纽扣电池3V两粒</div>
+                                <div class="now">
+                                    ￥<span>19.9</span>
+                                </div>
+                                <span class="before"><del>￥29</del></span>
+                                <div class="state">热卖中</div>
+                            </a>
+                        </div>
+                        <div class="goods_list">
+                            <a href="">
+                                <div class="img">
+                                    <img src="upload/goods_list1.jpg.webp" alt="">
+                                    <div class="lowtxt">33天最低价</div>
+
+                                </div>
+                                <div class="txt">松下CR2032进口纽扣电池3V两粒</div>
+                                <div class="now">
+                                    ￥<span>19.9</span>
+                                </div>
+                                <span class="before"><del>￥29</del></span>
+                                <div class="state">热卖中</div>
+                            </a>
+                        </div>
+                        <div class="goods_list">
+                            <a href="">
+                                <div class="img">
+                                    <img src="upload/goods_list1.jpg.webp" alt="">
+                                    <div class="lowtxt">33天最低价</div>
+
+                                </div>
+                                <div class="txt">松下CR2032进口纽扣电池3V两粒</div>
+                                <div class="now">
+                                    ￥<span>19.9</span>
+                                </div>
+                                <span class="before"><del>￥29</del></span>
+                                <div class="state">热卖中</div>
+                            </a>
+                        </div>
+                        <div class="goods_list">
+                            <a href="">
+                                <div class="img">
+                                    <img src="upload/goods_list1.jpg.webp" alt="">
+                                    <div class="lowtxt">33天最低价</div>
+
+                                </div>
+                                <div class="txt">松下CR2032进口纽扣电池3V两粒</div>
+                                <div class="now">
+                                    ￥<span>19.9</span>
+                                </div>
+                                <span class="before"><del>￥29</del></span>
+                                <div class="state">热卖中</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fast">
+                <div class="box_head">
+                    <a href="#">
+                        品牌闪购
+                        <div class="yuan iconfont">&#xe66d;</div>
+                    </a>                    
+                </div>
+                <a href=""><img src="upload/fastpic1.png" alt="" class="big"></a>
+                    <div class="fast_list">
+                        <div class="fast_details">
+                            <a href="">
+                                <img src="upload/fast_details1.webp" alt="">
+                                <div class="names">315乐器闪购活动</div>
+                            </a>
+                        </div>
+                        <div class="fast_details">
+                            <a href="">
+                                <img src="upload/fast_details1.webp" alt="">
+                                <div class="names">315乐器闪购活动</div>
+                            </a>
+                        </div>
+                        <div class="fast_details">
+                            <a href="">
+                                <img src="upload/fast_details1.webp" alt="">
+                                <div class="names">315乐器闪购活动</div>
+                            </a>
+                        </div>
+                        <div class="fast_details">
+                            <a href="">
+                                <img src="upload/fast_details1.webp" alt="">
+                                <div class="names">315乐器闪购活动</div>
+                            </a>
+                        </div>
+                        <div class="fast_details">
+                            <a href="">
+                                <img src="upload/fast_details1.webp" alt="">
+                                <div class="names">315乐器闪购活动</div>
+                            </a>
+                        </div>
+                        <div class="fast_details">
+                            <a href="">
+                                <img src="upload/fast_details1.webp" alt="">
+                                <div class="names">315乐器闪购活动</div>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- 发现好货 -->
+    <div class="find_goods">
+        <div class="find_content w">
+            <div class="find_left">
+                <a href="">
+                    <div class="logo_txt">
+                        探索新生活
+                        <div class="yuanjiao iconfont">&#xe66d;</div>
+                    </div>
+                </a>
+            </div>
+            <div class="find_lists">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="upload/shirt1.jpg.webp" alt="">
+                            <p>法国鳄鱼 宽松纯色 衬衫</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>法国鳄鱼 宽松纯色 衬衫</p>
+                            <img src="upload/shirt1.jpg.webp" alt="">                           
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="upload/shirt1.jpg.webp" alt="">
+                            <p>法国鳄鱼 宽松纯色 衬衫</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>法国鳄鱼 宽松纯色 衬衫</p>
+                            <img src="upload/shirt1.jpg.webp" alt="">                           
+                        </a>
+                    </li><li>
+                        <a href="#">
+                            <img src="upload/shirt1.jpg.webp" alt="">
+                            <p>法国鳄鱼 宽松纯色 衬衫</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>法国鳄鱼 宽松纯色 衬衫</p>
+                            <img src="upload/shirt1.jpg.webp" alt="">                           
+                        </a>
+                    </li>
+                </li><li>
+                    <a href="#">
+                        <img src="upload/shirt1.jpg.webp" alt="">
+                        <p>法国鳄鱼 宽松纯色 衬衫</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>法国鳄鱼 宽松纯色 衬衫</p>
+                        <img src="upload/shirt1.jpg.webp" alt="">                           
+                    </a>
+                </li>
+                </ul>
+                <div class="jindutiao">
+                    <div class="huakuai"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 新品排行 -->
+    <div class="good_top">
+        <div class="gt_content w">
+            <div class="gts ngoods">
+                <div class="head">
+                    <a href="">
+                        <h1>新品首发</h1>
+                        <i class="iconfont">&#xe66d;</i>
+                    </a>
+                </div>
+                <div class="left_arror">&#xe66f;</div>
+                <div class="right_arror">&#xe66d;</div>
+            </div>
+            <div class="gts tps">
+                <div class="head">
+                    <a href="">
+                        <h1>排行榜</h1>
+                        <i class="iconfont">&#xe66d;</i>
+                    </a>
+                </div>
+                <div class="gt_nav">
+                    <ul>
+                        <li class="current"><a href="">手机</a></li>
+                        <li><a href="">厨房小店</a></li>
+                        <li><a href="">影音娱乐</a></li>
+                        <li><a href="">面部护理</a></li>
+                    </ul>
+                </div>
+                <div class="new_top_list">
+                    <div class="details_goods">
+                        <a href="">
+                            <img src="img/top1.png" alt="" class="tpic">
+                            <img src="upload/erji1.jpg!q90.webp" alt="" class="goods">
+                            <div class="txt">美的（Midea）M1-L213B 21升 快捷微波炉 家用小型迷你 360°转盘加热 旋钮操控 精准控温 五档火力 易洁内胆</div>
+                        </a>
+                    </div>
+                    <div class="details_goods">
+                        <a href="">
+                            <img src="img/top1.png" alt="" class="tpic">
+                            <img src="upload/erji1.jpg!q90.webp" alt="" class="goods">
+                            <div class="txt">美的（Midea）M1-L213B 21升 快捷微波炉 家用小型迷你 360°转盘加热 旋钮操控 精准控温 五档火力 易洁内胆</div>
+                        </a>
+                    </div>
+                    <div class="details_goods">
+                        <a href="">
+                            <img src="img/top1.png" alt="" class="tpic">
+                            <img src="upload/erji1.jpg!q90.webp" alt="" class="goods">
+                            <div class="txt">美的（Midea）M1-L213B 21升 快捷微波炉 家用小型迷你 360°转盘加热 旋钮操控 精准控温 五档火力 易洁内胆</div>
+                        </a>
+                    </div>
+                       
+                </div>
+            </div>
+            <div class="gts hd">
+                <div class="head">
+                    <a href="">
+                        <h1>逛好店</h1>
+                        <i class="iconfont">&#xe66d;</i>
+                    </a>
+                </div>
+                <div class="hd_body">
+                    <div class="hd_list">
+                        <a href="">
+                            <div class="txt">君乐宝京东自营旗舰店</div>
+                            <span class="red">自营</span>
+                           
+                            <div class="count">278万人关注</div>
+                            <img src="upload/erji1.jpg!q90.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="hd_list">
+                        <a href="">
+                            <div class="txt">君乐宝京东自营旗舰店</div>
+                            <span class="red">自营</span>
+                            <span class="blue">家电集结</span>
+                            <div class="count">278万人关注</div>
+                            <img src="upload/erji1.jpg!q90.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="gts yh">
+                <div class="head">
+                    <a href="">
+                        <h1>领券中心</h1>
+                        <i class="iconfont">&#xe66d;</i>
+                    </a>
+                </div>
+                <div class="yh_body">
+                    <div class="yh_list">
+                        <a href="">
+                            <div class="yuantu">
+                                <img src="upload/mobile1.jpg.webp" alt="">
+                            </div>
+                            <div class="price">
+                                ￥<span>200</span>
+                            </div>
+                            <div class="limit">满5000可用</div>
+                            <div class="desc">
+                                仅可购买指定iPhone 11商品
+                            </div>
+                            <div class="more">
+                                更多好券
+                                <div class="jian iconfont">&#xe66d;</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="yh_list">
+                        <a href="">
+                            <div class="yuantu">
+                                <img src="upload/mobile1.jpg.webp" alt="">
+                            </div>
+                            <div class="price">
+                                ￥<span>200</span>
+                            </div>
+                            <div class="limit">满5000可用</div>
+                            <div class="desc">
+                                仅可购买指定iPhone 11商品
+                            </div>
+                            <div class="more">
+                                更多好券
+                                <div class="jian iconfont">&#xe66d;</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="yh_list">
+                        <a href="">
+                            <div class="yuantu">
+                                <img src="upload/mobile1.jpg.webp" alt="">
+                            </div>
+                            <div class="price">
+                                ￥<span>200</span>
+                            </div>
+                            <div class="limit">满5000可用</div>
+                            <div class="desc">
+                                仅可购买指定iPhone 11商品
+                            </div>
+                            <div class="more">
+                                更多好券
+                                <div class="jian iconfont">&#xe66d;</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 频道广场 -->
+    <div class="ground">
+        <div class="ground_head w">
+            <div class="ground_title">频道广场</div>
+        </div>
+        <div class="ground_body w">
+
+            <div class="big_goods"><a href=""><img src="upload/big_goods.webp" alt=""></a></div>
+            <div class="big_goods"><a href=""><img src="upload/big_good2.webp" alt=""></a></div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods clear">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods clear">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+            <div class="small_goods">
+                <a href="" class="all">
+                    <div class="txt">
+                        食品饮料<span>吃货嘉年华</span>
+                    </div>
+                    
+                    <img src="upload/food1.webp" alt="">
+                    <img src="upload/food2.webp" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 为你推荐 -->
+    <div class="recomend">
+         <div class="ground_head w">
+            <div class="ground_title">为你推荐</div>
+        </div>
+        <div class="recomend_nav w">
+            <ul>
+                <li class="select">
+                    <a href="">
+                        <span class="title">精选</span>
+                        <div class="txt">猜你喜欢</div>
+                    </a>
+                    <div class="feed-tab__item-gap"></div>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">智能先锋</span>
+                        <div class="txt">大电器城</div>
+                    </a>
+                    <div class="feed-tab__item-gap"></div>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">居家优品</span>
+                        <div class="txt">品质生活</div>
+                    </a>
+                    <div class="feed-tab__item-gap"></div>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">超市百货</span>
+                        <div class="txt">百货生鲜</div>
+                    </a>
+                    <div class="feed-tab__item-gap"></div>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">时尚达人</span>
+                        <div class="txt">美妆穿搭</div>
+                    </a>
+                    <div class="feed-tab__item-gap"></div>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="title">进口好物</span>
+                        <div class="txt">京东国际</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="recomend_body w">
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        <span>自营</span>蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">满减</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">券</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        <span>自营</span>
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">满减</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">券</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        <span>自营</span>
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">满减</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        <span>自营</span>蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">满减</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">券</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        <span>自营</span>
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">满减</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">券</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+            <div class="re_goods">
+                <a href="" title="蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生">
+                    <img src="upload/regoods1.jpg.webp" alt="">
+                    <div class="txt">
+                        <span>自营</span>
+                        蒂蔻 T0383招财貔貅黄金转运珠手链女士款足金石榴石路路通手串两圈3D硬金饰品生日礼物送女生
+                    </div>
+                    <div class="price">
+                        ￥<span>318.00</span>
+                    </div>
+                    <div class="taggs">满减</div>
+                </a>
+                <div class="find_mask">
+                    <div class="find_like">
+                        <a href="">&#xe633; 找相似</a>
+                        
+                    </div>
+                </div>
+                <div class="find_close" title="不喜欢">&#xe75d;</div>
+            </div>
+        </div>
+    </div>
+    <!-- mod_service -->
+    <div class="mod_service">
+        <div class="mod_content w">
+            <div class="service_items">
+                <div class="pic"></div>
+                品类齐全，轻松购物
+            </div>
+            <div class="service_items">
+                <div class="pic"></div>
+                多仓直发，极速配送
+            </div>
+            <div class="service_items">
+                <div class="pic"></div>
+                正品行货，精致服务
+            </div>
+            <div class="service_items">
+                <div class="pic"></div>
+                天天低价，畅选无忧
+            </div>
+        </div>
+    </div>
+    <!-- mod_help -->
+    <div class="mod_help">
+        <div class="help_content w">
+                <dl>                   
+                    <dt>购物指南</dt>
+                    <dd><a href="">购物流程</a></dd>
+                    <dd><a href="">会员介绍</a></dd>
+                    <dd><a href="">生活旅行</a></dd>
+                    <dd><a href="">常见问题</a></dd>
+                    <dd><a href="">大家电</a></dd>
+                    <dd><a href="">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>配送方式</dt>                   
+                    <dd><a href="">上门自提</a></dd>
+                    <dd><a href="">211限时达</a></dd>
+                    <dd><a href="">配送服务查询</a></dd>
+                    <dd><a href="">配送费收取标准</a></dd>
+                    <dd><a href="">海外配送</a></dd>
+                </dl>
+                <dl>
+                    <dt>支付方式</dt>
+                    <dd><a href="">货到付款</a></dd>
+                    <dd><a href="">在线支付</a></dd>
+                    <dd><a href="">分期付款</a></dd>
+                    <dd><a href="">公司转账</a></dd>
+                </dl>
+                <dl>
+                    <dt>售后服务</dt>
+                    <dd><a href="">售后政策</a></dd>
+                    <dd><a href="">价格保护</a></dd>
+                    <dd><a href="">退款说明</a></dd>
+                    <dd><a href="">返修/退换货</a></dd>
+                    <dd><a href="">取消订单</a></dd>
+                </dl>
+                <dl>
+                    <dt>特色服务</dt>
+                    <dd><a href="">夺宝岛</a></dd>
+                    <dd><a href="">DIY装机</a></dd>
+                    <dd><a href="">延保服务</a></dd>
+                    <dd><a href="">京东E卡</a></dd>
+                    <dd><a href="">京东通信</a></dd>
+                    <dd><a href="">京鱼座智能</a></dd>
+                </dl>
+                <div class="last">
+                    <h2>京东自营覆盖区县</h2>
+                    京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。<br>
+                    <a href="">查看详情 ></a>
+                </div>
+        </div>
+    </div>
+    <!-- mod_copyright -->
+    <div class="mod_copyright">
+        <div class="copy_content w">
+            <div class="copy_links"><a href="">
+                <a href="">关于我们</a><span>|</span>
+                <a href="">联系我们</a><span>|</span>
+                <a href="">联系客服</a><span>|</span>
+                <a href="">合作招商</a><span>|</span>
+                <a href="">商家帮助</a><span>|</span>
+                <a href="">营销中心</a><span>|</span>
+                <a href="">手机京东</a><span>|</span>
+                <a href="">友情链接</a><span>|</span>
+                <a href="">销售联盟</a><span>|</span>
+                <a href="">京东社区</a><span>|</span>
+                <a href="">风险监测</a><span>|</span>
+                <a href="">隐私政策</a><span>|</span>
+                <a href="">京东公益</a><span>|</span>
+                <a href="">English Site</a><span>|</span>
+                <a href="">Media & IR</a>
+            </div>
+            <div class="copy_lists">
+                <a href="">京公网安备 11000002000088号</a><span>|</span>
+                京ICP证070359号<span>|</span>
+                <a href="">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a><span>|</span>
+                新出发京零 字第大120007号<br>
+                互联网出版许可证编号新出网证(京)字150号<span>|</span>
+                <a href="">出版物经营许可证</a><span>|</span>
+                <a href="">网络文化经营许可证京网文[2014]2148-348号</a><span>|</span>
+                违法和不良信息举报电话：4006561155<br>
+                Copyright © 2004 - 2020  京东JD.com 版权所有<span>|</span>
+                消费者维权热线：4006067733 <a href="">经营证照</a><span>|</span>
+                (京)网械平台备字(2018)第00003号<span>|</span>
+                <a href="">营业执照</a><br>
+                <a href=""><i></i>Global Site</a><span>|</span>
+                <a href=""><i></i>Global Site</a><span>|</span>
+                <a href=""><i></i>Global Site</a><span>|</span>
+                <a href=""><i></i>Global Site</a><span>|</span>
+                <a href=""><i></i>Global Site</a><br>
+                京东旗下网站：<a href="">京东钱包</a><span>|</span><a href="">京东智联云</a>
+            </div>
+            <div class="copy_pics">
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="cbl">
+        <div class="floors">
+            京东秒杀
+        </div>
+        <div class="floors">
+            特色优选
+        </div>
+        <div class="floors">
+            频道广场
+        </div>
+        <div class="floors">
+            为你推荐
+        </div>
+        <div class="floors">
+            客服
+        </div>
+        <div class="floors">
+           反馈
+        </div>
+        <div class="back_top">
+            顶部
+         </div>
+    </div>
+
+
+</div>  
+</body>
+</html>
